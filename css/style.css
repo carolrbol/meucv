@@ -31,3 +31,25 @@ p{
 h1{
     color: rgb(223, 0, 186);
 }
+
+.container {
+    display: flex; /* Mantém os elementos lado a lado */
+    align-items: center; /* Alinha na vertical */
+    gap: 15px; /* Espaço entre a imagem e o texto */
+    max-width: 600px; /* Define um tamanho máximo */
+    margin: auto; /* Centraliza na tela */
+    padding: 10px;
+}
+
+/* Imagem */
+.foto {
+    width: 40%; /* Define um tamanho proporcional */
+    height: auto; /* Mantém a proporção */
+    max-width: 200px; /* Evita que fique muito grande */
+}
+
+/* Texto */
+.texto {
+    font-size: 20px;
+    flex: 1.5; /* Faz o texto ocupar o espaço restante */
+}
