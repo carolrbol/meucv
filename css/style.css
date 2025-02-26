@@ -11,10 +11,6 @@ body {
     max-width: 50px;
 }
 
-.container {
-    margin-top: 30px;
-}
-
 /* Estilização do formulário */
 .form-container {
     max-width: 500px;
@@ -32,24 +28,68 @@ h1{
     color: rgb(223, 0, 186);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal */
 .container {
     display: flex; /* Mantém os elementos lado a lado */
-    align-items: center; /* Alinha na vertical */
-    gap: 15px; /* Espaço entre a imagem e o texto */
-    max-width: 600px; /* Define um tamanho máximo */
-    margin: auto; /* Centraliza na tela */
-    padding: 10px;
+    align-items: left; /* Alinha verticalmente */
+    justify-content: space-between; /* Separa o texto da imagem */
+    max-width: 900px; /* Limita a largura */
+    margin: 10px auto; /* Centraliza na tela */
+    padding: 20px;
+    
 }
 
-/* Imagem */
-.foto {
-    width: 40%; /* Define um tamanho proporcional */
-    height: auto; /* Mantém a proporção */
-    max-width: 200px; /* Evita que fique muito grande */
-}
-
-/* Texto */
+/* Estilizando o texto */
 .texto {
-    font-size: 20px;
-    flex: 1.5; /* Faz o texto ocupar o espaço restante */
+    font-size: 28px; /* Tamanho grande do texto */
+    max-width: 500px; /* Define um limite de largura */
 }
+
+/* Estilizando a imagem */
+.foto {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 15px;
+    width: 100%; /* Ajusta a imagem para telas pequenas */
+        max-width: 250px;
+        height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha no mobile */
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 28px; /* Reduz um pouco o tamanho do texto */
+    }
+
+}
+.title {
+font-size: 38px;
+}
+
+.rodape {
+    background-color: #000; /* Fundo escuro */
+    text-align: center;     /* Centraliza o texto */
+    padding: 10px;          /* Espaçamento interno */
+    margin-top: 80px;       /* Espaço acima do rodapé */
+  }
+
+  .rodape p {
+    color: #fff; 
+  }
+
+  .carol{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 38px;
+  }

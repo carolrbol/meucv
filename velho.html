@@ -1,67 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto vmo5</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Navbar à Direita</title>
     <style>
-        p {
-            color: rgb(161, 5, 223);
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 {
-            color: rgb(140, 0, 255);
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        /* Navbar */
+        .navbar {
+            background-color: #000; /* Fundo preto */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end; /* Alinha os itens à direita */
+            align-items: center;
+        }
+
+        /* Lista de links */
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Espaço entre os itens */
+        }
+
+        .nav-list li {
+            display: inline;
+        }
+
+        /* Links */
+        .nav-list a {
+            text-decoration: none;
+            color: white; /* Texto branco */
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Efeito ao passar o mouse */
+        .nav-list a:hover {
+            color: #f39c12; /* Cor laranja no hover */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .navbar {
+                justify-content: center; /* Centraliza no mobile */
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="img/pinguim.png" width="40" height="40" alt="Logotipo linux"> <br>
-    <img src="img/linux-logo.png" width="200" height="60" alt="logotipo linux">
-    <p style="background-color:Tomato;">Lorem ipsum...</p>
-    <h1>Projeto de aula</h1>
-    <h2>Exemplo</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore commodi saepe, est placeat corrupti veniam quo consequatur recusandae laborum officia accusamus ipsam quidem ex ut vitae odit perspiciatis sed dolore tenetur delectus laboriosam temporibus? Dignissimos repellendus labore mollitia optio. Et nihil maxime sed esse maiores iusto ab delectus illo impedit voluptatum aperiam suscipit harum reprehenderit, facere dicta possimus asperiores? Quasi, necessitatibus vero, ipsa nesciunt earum illum soluta excepturi aliquid hic perspiciatis, eveniet odit eos dolore aspernatur laudantium dolores harum molestiae. Expedita, dolores unde! Autem quod soluta magni, excepturi veritatis exercitationem hic, molestias omnis dignissimos repudiandae iure rem nesciunt pariatur nam?</p>
 
-    <table border="1">
-        <p style="color: blue; font-size: 20px;">Esses são os produtos da loja:</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#redes">Redes</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
-        <tr>
-            <th>Produto</th>
-            <th>Preço</th>
-        </tr>
-        <tr>
-            <td>Camisa</td>
-            <td>R$ 100,00</td>
-        </tr>
-        <tr>
-            <td>Calça</td>
-            <td>R$ 150,00</td>
-        </tr>
-        <tr>
-            <td>Vestido</td>
-            <td>R$ 250,00</td>
-        </tr>
-    </table>
-    
-    <br>
-    <p style="color: rgb(140, 0, 255); font-size: 20px;">Para comprar cadastra-se:</p>
-    <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required> 
-        <br>
-        <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="dataNascimento" name="dataNascimento" required>
-<br>
-       
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-       </p><br>
-        <button type="submit">Enviar</button>
-    </form>
-    <p>Para mostrar o estilo dentro do css</p>
-
-
-    
 </body>
 </html>
