@@ -93,3 +93,37 @@ font-size: 38px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 38px;
   }
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adiciona 5px de espaço entre a foto e os ícones */
+}
+
+.foto img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px; /* Mantém bordas arredondadas */
+    border: 3px solid #ccc;
+}
+
+.icones {
+    display: flex;
+    flex-direction: column; /* Deixa os ícones em coluna */
+    align-items: center; 
+    gap: 45px;
+    
+}
+
+.icones a {
+    font-size: 80px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+    
+}
+
+.icones a:hover {
+    color: #0077b5; /* Altera a cor ao passar o mouse */
+}
